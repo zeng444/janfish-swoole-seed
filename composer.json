@@ -6,7 +6,7 @@
     "swoole",
     "swoft"
   ],
-  "description": "Modern High performance AOP and Coroutine PHP Framework",
+  "description": "Janfish Swoft Seed",
   "license": "Apache-2.0",
   "require": {
     "php": ">7.1",
