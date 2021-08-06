@@ -1,0 +1,21 @@
+version: '3.4'
+services:
+  swoft-seed:
+    image: swoft/swoft
+#    for local develop
+#    command: ["php","/var/www/swoft/bin/swoft","http:start"]
+    command: ["php","./swoftcli.phar","run","-c","http:start"]
+    container_name: swoft-cat
+    environment:
+      - APP_ENV=dev
+      - TIMEZONE=Asia/Shanghai
+    restart: always
+    expose:
+      - 18306-18308
+    volumes:
+       - ./:/var/www/swoft
+
+networks:
+  default:
+    external:
+      name: janfish
